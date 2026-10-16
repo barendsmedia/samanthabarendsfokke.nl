@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Samantha Barends Fokke — CV</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23F7B6C2'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia' font-size='28' font-weight='700' fill='%232B1B2E'%3ESB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=Nunito:wght@400..800&display=swap" rel="stylesheet">
+<style>
+{{STYLES}}
+</style>
+</head>
+<body class="locked">
+
+<div class="gate" id="gate">
+  <span class="blob" style="width:420px;height:420px;background:var(--yellow);left:-120px;top:-140px"></span>
+  <span class="blob" style="width:260px;height:260px;background:var(--rose);right:-60px;bottom:-60px;animation-delay:-3s"></span>
+  <form id="gateForm" autocomplete="off">
+    <div class="eyebrow">Persoonlijk cv</div>
+    <h1>Samantha Barends Fokke</h1>
+    <p>Vul de toegangscode in om het cv te bekijken.</p>
+    <input id="code" type="password" placeholder="••••••" aria-label="Toegangscode" autofocus>
+    <button type="submit" id="go">Bekijk cv</button>
+    <p class="err" id="err" role="alert"></p>
+  </form>
+</div>
+
+<div id="app"></div>
+
+<!-- Versleutelde inhoud: alleen leesbaar met de juiste toegangscode -->
+<script id="payload" type="application/json">{{PAYLOAD}}</script>
+<script>
+{{MAIN}}
+</script>
+<script>
+{{GATE}}
+</script>
+</body>
+</html>
