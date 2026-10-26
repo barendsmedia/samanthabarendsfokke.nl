@@ -13,8 +13,12 @@ img{display:block;max-width:100%}
 /* ---------- Toegangscode ---------- */
 .gate{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:24px;background:var(--pink);transition:opacity .7s var(--ease),visibility .7s}
 .gate.hidden{opacity:0;visibility:hidden}
-.gate .blob{position:absolute;border-radius:50%}
-.gate form{position:relative;background:var(--cream);border-radius:32px;padding:48px 40px;width:min(440px,100%);text-align:center;box-shadow:0 30px 60px -20px rgba(43,27,46,.35)}
+.gate .blob{position:absolute;border-radius:50%;z-index:0}
+@media (max-width:600px){
+  .gate .blob:first-of-type{width:240px !important;height:240px !important;left:-110px !important;top:-110px !important}
+  .gate .blob:nth-of-type(2){width:180px !important;height:180px !important;right:-80px !important;bottom:-80px !important}
+}
+.gate form{position:relative;z-index:2;background:var(--cream);border-radius:32px;padding:48px 40px;width:min(440px,100%);text-align:center;box-shadow:0 30px 60px -20px rgba(43,27,46,.35)}
 .gate h1{font-family:var(--serif);font-weight:600;font-size:34px;line-height:1.1;margin:8px 0 10px}
 .gate p{color:var(--ink-soft);font-size:17px;margin-bottom:28px}
 .gate input{width:100%;font:inherit;font-size:20px;text-align:center;letter-spacing:.2em;padding:16px;border:2px solid var(--line);border-radius:16px;background:#fff;color:var(--ink);outline:none;transition:border-color .2s}
